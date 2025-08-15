@@ -1,0 +1,159 @@
+:root {
+    --main: #f9f9f9;
+    --sec: black;
+    --3rd: #aeb0b1;
+    --4th: #f1f1f1;
+    --theme-grad: linear-gradient(to bottom, #f7118c, #fc4f3b);
+}
+
+
+.darkmode {
+    --main: black;
+    --sec: #f9f9f9;
+    --3rd: darkgray;
+    --4th: #1f1f1f;
+    --theme-grad: linear-gradient(to bottom, #f7118c, #fc4f3b);
+
+}
+
+p, div, h4 {
+    color: var(--sec);
+    margin: 15px;
+}
+
+button {
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    display: grid;
+    align-content: center;
+    font-size: large;
+    border-width: 0px;
+}
+
+button:hover {
+    background-color: var(--4th);
+}
+
+button:active{    
+    transform: scale(0.9);
+}
+
+.operador, .otro {
+    background-color: var(--3rd);
+    color: var(--sec);
+}
+
+.num, .dot {
+    background-color: var(--main);
+    color: var(--sec);
+}
+
+.equal {
+    height: 150px;
+    background-image: var(--theme-grad);
+    display: grid;
+    grid-area: myArea;
+    border-radius: 20px;
+}
+
+img {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+}
+
+.botones {
+    background-color: var(--4th);
+    display: grid;
+    grid-template-areas: 
+    '. . . .'
+    '. . . .'
+    '. . . .'
+    '. . . myArea'
+    '. . . myArea'
+    '. . . myArea';
+    gap: 20px 0px;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+    border-radius: 20px;
+}
+
+.todo {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--main);
+}
+
+
+* {
+    border-radius: 20px;   
+    justify-items: center;
+    justify-content: center;
+    font-family: 'Monserrat', sans-serif;
+    
+}
+
+.container {
+    background-color: var(--main);
+    display: flex;
+    flex-direction: column;
+    min-width: 24rem;
+    max-width: 32rem;
+}
+
+.resultados {
+    color: var(--sec);
+    justify-content: end;
+    justify-items: end;
+    padding-right: 50px;
+    min-height: 120px;
+}
+
+.hist {
+    min-width: 24rem;
+    justify-items: center;
+    justify-content: center;
+    background-color: var(--4th);
+}
+
+#theme {
+    height: 50px;
+    width: 50px;
+}
+
+#theme img:first-child {
+    display: inline;
+}
+
+#theme img:last-child {
+    display: none;
+}
+
+.darkmode #theme img:first-child{
+    display: none;
+}
+
+.darkmode #theme img:last-child{
+    display: inline;
+}
+
+#limpiar-hist {
+    border-radius: 20px;
+    width: 7rem;
+    background-image: var(--theme-grad);
+    color: #f1f1f1;
+
+}
+
+#limpiar-hist:active {
+    transform: scale(0.9);
+}
+
+@media (max-width: 800px) {
+    .todo {
+        flex-direction: column;
+    }
+}
