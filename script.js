@@ -100,7 +100,7 @@ botones.forEach(boton => {
             console.log(boton.textContent);
             actualizarDisplay();
         } else if(boton.classList.contains('operador') && operacion.length > 0){
-            if(operadores.includes(lastDigit)){
+            if(operadores.includes(operacion.slice(-1))){
                 operacion = operacion.slice(0, -1) + valor;
                 actualizarDisplay(); 
             } else {
